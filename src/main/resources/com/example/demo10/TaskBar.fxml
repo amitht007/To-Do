@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="taskPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="122.0" prefWidth="462.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo10.Controller">
+   <children>
+      <TextField fx:id="text" alignment="CENTER" layoutX="67.0" layoutY="29.0" prefHeight="35.0" prefWidth="239.0" promptText="Type Your Task Here!" style="-fx-background-color: #012b6e; -fx-border-color: #3884ff; -fx-effect: dropshadow(three-pass-box, blue, 10.0, 0.0, 0.0, 0.0);">
+         <effect>
+            <Reflection topOpacity="0.0">
+               <input>
+                  <Glow />
+               </input>
+            </Reflection>
+         </effect></TextField>
+      <Button fx:id="startButton" layoutX="67.0" layoutY="67.0" mnemonicParsing="false" onAction="#startTimer" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #002157; -fx-border-color: #4d91ff; -fx-effect: dropshadow(three-pass-box, blue, 10.0, 0.0, 0.0, 0.0);" text="Start" textFill="WHITE">
+         <effect>
+            <Reflection topOpacity="0.13" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Button>
+      <Label fx:id="timeLabel" alignment="CENTER" layoutX="314.0" layoutY="29.0" prefHeight="35.0" prefWidth="96.0" style="-fx-background-color: #012b6e; -fx-border-color: #1c60ff; -fx-effect: dropshadow(three-pass-box, blue, 10.0, 0.0, 0.0, 0.0);" text="Label" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Reflection topOpacity="0.0">
+               <input>
+                  <Glow />
+               </input>
+            </Reflection>
+         </effect>
+      </Label>
+      <Button fx:id="removeButton" layoutX="369.0" layoutY="67.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="25.0" prefWidth="41.0" style="-fx-background-color: #002b8f; -fx-border-color: #5e8fff; -fx-effect: dropshadow(three-pass-box, blue, 10.0, 0.0, 0.0, 0.0);" text="X" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Reflection topOpacity="0.13" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Button>
+      <TextField fx:id="hour" layoutX="170.0" layoutY="68.0" prefHeight="25.0" prefWidth="41.0" promptText="hh" style="-fx-background-color: #002b8f;" />
+      <TextField fx:id="minute" layoutX="218.0" layoutY="67.0" prefHeight="25.0" prefWidth="41.0" promptText="mm" style="-fx-background-color: #002b8f;" />
+      <TextField fx:id="second" layoutX="265.0" layoutY="67.0" prefHeight="25.0" prefWidth="41.0" promptText="ss" style="-fx-background-color: #002b8f;" />
+      <Button fx:id="setButton" alignment="CENTER" layoutX="314.0" layoutY="67.0" mnemonicParsing="false" onAction="#setButton" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: #002b8f; -fx-border-color: #5e8fff; -fx-effect: dropshadow(three-pass-box, blue, 10.0, 0.0, 0.0, 0.0);" text="SET" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <Reflection topOpacity="0.13" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor></Button>
+   </children>
+   <effect>
+      <Glow level="0.43" />
+   </effect>
+</Pane>
